@@ -16,7 +16,7 @@ function LobbyPage({ items }) {
 
     return (
         <div>
-            <h1>Choose code block</h1>
+            <h4>Choose code block</h4>
             <ul className="list-group">
             {items.map(item => (
                 <li className="list-group-item" key={item.id}>

@@ -1,0 +1,16 @@
+textarea {
+    background-color: #f8f8ff;
+    outline: none;
+    border: none;
+}
+
+textarea:focus {
+    outline: none;
+    border: none;
+    background-color: #f8f8ff;
+}
+
+.code {
+    width: 700px;
+    height: 500px;
+}

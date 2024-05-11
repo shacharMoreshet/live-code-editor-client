@@ -4,11 +4,14 @@ import LobbyPage from './components/LobbyPage';
 import CodeBlock from './components/CodeBlock';
 import { SocketProvider } from './context/SocketContext'
 import { MainProvider } from './context/MainContext'
+import './App.css';
 
 
 const items = [
-  { id: 0, title: "Async-Await example"},
-  { id: 1, title: "For Loop"}
+  { id: 0, title: "Async-Await"},
+  { id: 1, title: "For Loop"}, 
+  { id: 2, title: "Recursion"},
+  { id: 3, title: "Classes"}
 ];
 
 function App() {

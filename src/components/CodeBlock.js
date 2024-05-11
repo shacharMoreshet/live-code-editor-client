@@ -4,6 +4,7 @@ import { SocketContext } from '../context/SocketContext'
 import { MainContext } from '../context/MainContext';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import '../CodeBlock.css';
 
 function CodeBlock({items}) {
     const socket = useContext(SocketContext)
@@ -30,18 +31,28 @@ function CodeBlock({items}) {
         });
     };
 
+    const getMentorCodeComponent = () => {
+        if (code !== '') {
+            return (<SyntaxHighlighter language="javascript" style={docco}>{code}</SyntaxHighlighter>)
+        } else {
+            return (<div class="alert alert-info" role="alert">Waiting for students to start writing code...</div>);
+        }
+    }
+
     if (!item) {
         return <div>Code not found!</div>;
     }
 
     return (
         <div>
-            <h1>{item.title} for {activeUser.isMentor ? "Mentor" : "Student"}</h1>
+            <h4>{item.title} for {activeUser.isMentor ? "Mentor" : "Student"}</h4>
+            <div className='code'>
             {
                 activeUser.isMentor ? 
-                <SyntaxHighlighter language="javascript" style={docco}>{code}</SyntaxHighlighter>
-                : <textarea value={code} onChange={handleCodeChange} spellCheck="false"/>
+                getMentorCodeComponent()
+                : <textarea className='code' value={code} onChange={handleCodeChange} spellCheck="false"/>
             }
+            </div>
         </div>
     );
 }

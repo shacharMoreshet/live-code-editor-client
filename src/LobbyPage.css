@@ -1,19 +1,16 @@
-h1{
-    font-family: Georgia, serif;
-    margin-bottom: 20px;
-    margin-top: 20px;
+h4{
+    font-family: 'Open Sans';
 }
 
 .list-group{
-    width: 25%;  
+    width: 400px; 
 }
 
 .list-group-item a {
-    font-family: Georgia, serif;
+    font-family: 'Open Sans';
     font-size: 1.2em;
 }
 
-textarea {
-    height: 500px;
-    width: 50%;
+.list-group-item a:hover {
+    background-color:#cff4fc;
 }
