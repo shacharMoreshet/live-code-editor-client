@@ -1,0 +1,19 @@
+h1{
+    font-family: Georgia, serif;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.list-group{
+    width: 25%;  
+}
+
+.list-group-item a {
+    font-family: Georgia, serif;
+    font-size: 1.2em;
+}
+
+textarea {
+    height: 500px;
+    width: 50%;
+}
